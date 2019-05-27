@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  background:black;
+}
+*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; 
+padding:50px;
+background:black;
+margin:0}
+
+body .sticky {font-family: Verdana, sans-serif; 
+padding:0px;
+background:black;
+margin:0}
+
+@media screen and (max-width: 320px) {
+  body  {
+    padding:0px; 
+  }
+}
+.mySlides {display: none}
+.mySlides img{
+height:350px;
+}
+img {vertical-align: middle;}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.friend{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin:inherit;
+  /* left:130px; */
+  }
+
+  @media screen and (max-width: 1200px) {
+  .friend  {
+    left:0px; 
+	width: 250px;
+  }
+}
+
+  @media screen and (max-width: 1365px) {
+  .friend  {
+    left:0px; 
+	width: 250px;
+  }
+}
+
+  
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.navbar {
+  overflow: hidden;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  background-color: #333;
+  border-radius:10px 10px 0px 0px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Create four equal columns that floats next to each other */
+.column4 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.columnz {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.image_gallery {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.image_gallery2 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.image_gallery3 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.fb-post {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.row {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .column  {
+    width: 33.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column  {
+    width: 33.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .column  {
+    width: 33.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 650px) {
+  .column  {
+    width: 33.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 887px) {
+  .column  {
+    width: 100%;
+  }
+}
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .image_gallery  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .image_gallery  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .image_gallery  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 650px) {
+  .image_gallery  {
+    width: 30.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .image_gallery  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 904px) {
+  .image_gallery  {
+    width: 10%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .image_gallery  {
+    width: 20%;
+  }
+}
+
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 887px) {
+  .image_gallery  {
+    width: 10%;
+  }
+}
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 771px) {
+  .image_gallery  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 807px) {
+  .image_gallery  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 528px) {
+  .image_gallery  {
+    width: 30%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 476px) {
+  .image_gallery  {
+    width: 40%;
+  }
+}
+/*           image gallery two       */
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .image_gallery2  {
+    width: 15.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1180px) {
+  .image_gallery2  {
+    width: 15.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .image_gallery2  {
+    width: 15.3%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 809px) {
+  .image_gallery2  {
+    width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 834px) {
+  .image_gallery2  {
+    width: 30%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 528px) {
+  .image_gallery2  {
+    width: 40%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 476px) {
+  .image_gallery2  {
+    width: 50%;
+  }
+}
+
+
+/*   image gallery 3       */
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .image_gallery3  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .image_gallery3  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .image_gallery3  {
+    width: 10.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 650px) {
+  .image_gallery3  {
+    width: 30.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .image_gallery3  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 904px) {
+  .image_gallery3  {
+    width: 10%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .image_gallery3  {
+    width: 20%;
+  }
+}
+
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 887px) {
+  .image_gallery3  {
+    width: 10%;
+  }
+}
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 771px) {
+  .image_gallery3  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 807px) {
+  .image_gallery3  {
+    width: 20%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 528px) {
+  .image_gallery3  {
+    width: 30%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 476px) {
+  .image_gallery3  {
+    width: 40%;
+  }
+}
+/*---------------------------------------------------------------------*/
+.row2 {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  }
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.newColumn {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.quan {
+  float: left;
+  width: 34.5%;
+  padding: 10px;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .newColumn  {
+    width: 65.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .newColumn  {
+    width: 65.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .newColumn  {
+    width: 65.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 650px) {
+  .newColumn  {
+    width: 65.3%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .newColumn  {
+    width: 65%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .newColumn  {
+    width: 100%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 831px) {
+  .newColumn  {
+    width: 100%;
+  }
+}
+/*----------------------------------------------------------------*/
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1500px) {
+  .quan  {
+    width: 34.5%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .quan  {
+    width: 34.5%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .quan  {
+    width: 34.5%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 650px) {
+  .quan  {
+    width: 34.5%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .quan  {
+    width: 34.5%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 608px) {
+  .quan  {
+    width: 100.5%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 525px) {
+  .quan  {
+    width: 100.5%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 831px) {
+  .quan  {
+    width: 100.5%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (min-width: 1500px) {
+  .column4  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 447px) {
+  .column4  {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 500px) {
+  .column4  {
+    width: 50%;
+  }
+}
+
+
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 887px) {
+  .column4  {
+    width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 446px) {
+  .column4  {
+    width: 100%;
+  }
+}
+/* Create four equal columns that floats next to each other */
+.columnlast {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  color:white;
+  background: #2a2a2a;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (min-width: 1500px) {
+  .columnlast  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (min-width: 1292px) {
+  .columnlast  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 447px) {
+  .columnlast  {
+    width: 100%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 500px) {
+  .columnlast  {
+    width: 50%;
+  }
+}
+
+
+/* you can delete this and see what happen */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 887px) {
+  .columnlast  {
+    width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 446px) {
+  .columnlast  {
+    width: 100%;
+  }
+}
+
+.newColumn {
+font-family: "Georgia", serif;
+font-size: large;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  height:70px;
+}
+.sticky p{
+   background-color:#2a9ebb;
+   border-color:#2a9ebb;
+   text-align:center;
+}
+img:hover{
+   opacity: 0.4;
+  transition: opacity 1s;
+}
+</style>
+</head>
+<body>
+<div class="row">
+<img class="friend" src="LOGO.png" width="350px" height="200">
+</div>
+<br />
+<br />
+<!-- width="200" height="400"
+style="width:200px" -->
+
+
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <a href="#news">Courses</a>
+  <a href="#news">Apply</a>
+  <a href="#news">Contact Us</a>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="design_banner_1.png" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="design_Banner_2.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="design_banner_3.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="design_banner_4.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="Designs_Banner_5.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="Designs_banner_6.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<script>
+var slideon = 0;
+showit();
+
+function showit() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideon++;
+  if (slideon > slides.length) {slideon = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideon-1].style.display = "block";  
+  dots[slideon-1].className += " active";
+  setTimeout(showit, 4000); // Change image every 2 seconds
+}
+</script>
+
+<div class="row">
+  <div class="column" style="background-color:#3c3c3c;">
+    <video width="100%" poster="pugb2.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+  </div>
+  <div class="column" style="background-color:#3c3c3c;">
+    <video width="100%" poster="pugb5.png" controls>
+  <source src="Cavemen_Funny_Animated_3D_Short_Film.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+  </div>
+  <div class="column" style="background-color:#3c3c3c;">
+    <video width="100%" poster="pugb8.png" controls>
+  <source src="Animated_comedy_film_Cavemen_full_version.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+  </div>
+</div>
+<br />
+<div class="row2">
+<div class="newColumn" style="background-color:black; color:white; border:1px; border-style:solid; border-color:grey;">
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">3D Modelling, Digital Sculpting & Animations</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.Content copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Cinematography & Editing</h3>
+<img class="column" src="https://cdn-images-1.medium.com/max/1200/0*mSxHxowo1xcrBlK-" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<br />
+<h3 style="color:#0CF; text-decoration: underline; text-decoration-style:dotted; text-decoration-color:white">Graphic Design, Illustration & Publishing</h3>
+<img class="column" src="https://occ-0-990-987.1.nflxso.net/art/bbcda/76172f7c5760e58c40bf891f315d59e9042bbcda.jpg" alt="Italian Trulli">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+<video width="100%" poster="pugb3.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<img width="100%" src="https://ludic-labs.com/wp-content/uploads/2018/10/1539229973_251_83-upcoming-new-sci-fi-movies-of-2018-2019-beyond.jpg" alt="No preview">
+<video class="column4" width="100%" poster="pugb5.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video class="column4" width="100%" poster="pugb7.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video class="column4" width="100%" poster="pugb4.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video class="column4" width="100%" poster="cave2.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+<div style="background:white" class="fb-comment-embed" data-href="https://www.facebook.com/vctrainings/posts/506863259836665?comment_id=557670051422652&amp;comment_tracking=%7B%22tn%22%3A%22R%22%7D" data-width="300" data-include-parent="false"></div>
+</div>
+<div class="quan" style="background-color:#3c3c3c; color:white; border-style:solid; border-color:white;">
+<img width="100%" src="ACE.png" alt="No preview">
+<p>Application of 3D modelling, Digital Sculpting & Animations
+is broad; weather you intend working in film, television, advertising,
+media, entertainment and graphic industries learning 3D modelling, 
+digital sculpting & Animations will enable you to deliver an end-to-end
+creative workflow in animation, modeling, sculpting, lighting, 
+simulations, visual effects, motion graphics, virtualization and
+compositing.</p>
+  <div style="align:center" id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+<div class="fb-page" data-href="https://www.facebook.com/vctrainings/?modal=admin_todo_tour" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/vctrainings/?modal=admin_todo_tour" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/vctrainings/?modal=admin_todo_tour">VC Multimedia Academy</a></blockquote></div>
+<video width="100%" poster="pugb2.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+
+<!-- 
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+<img class="image_gallery" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="Loading...">
+-->
+<div class="quan" style="background-color:#3c3c3c;">
+<video width="100%" poster="pubg.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<!--
+<img class="image_gallery3" src="indesign.png" alt="Loading...">
+<img class="image_gallery3" src="illustrator.jpg" alt="Loading...">
+<img class="image_gallery3" src="photoshop.png" alt="Loading...">
+<img class="image_gallery3" src="corel.png" alt="Loading...">
+<img class="image_gallery3" src="maya.jpg" alt="Loading...">
+<img class="image_gallery3" src="blender.png" alt="Loading...">
+<img class="image_gallery3" src="Camtasia.png" alt="Loading...">
+<img class="image_gallery3" src="premiere.png" alt="Loading...">
+<img class="image_gallery3" src="after.jpg" alt="Loading...">
+<img class="image_gallery3" src="wordpress.png" alt="Loading...">
+<img class="image_gallery3" src="blogger.jpg" alt="Loading...">
+<img class="image_gallery3" src="youtube.jpg" alt="Loading...">
+-->
+<div class="quan">
+<h2 style="color:steelblue; font-size:20px;">Softwares We Teach</h2>
+
+</div>
+<img class="image_gallery3" src="android.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="ios.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="html5.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="css3.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="php.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="illustrator.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="indesign.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="photoshop.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="corel.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="premiere.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="Camtasia.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="after.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="maya.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="blender.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="wordpress.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="blogger.png" alt="Loading..." width="200px">
+<img class="image_gallery3" src="youtube.png" alt="Loading..." width="200px">
+<img class="quan" src="https://nccr-chembio.ch/wp-content/uploads/2019/01/MasterStudentsBannerWeb.png" alt="No preview">
+<div class="quan">
+<a height="300" class="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<img width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img  width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img  width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img  width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<img  width="45%" src="https://acatestprep.com/wp-content/uploads/AIflatCircle.png" alt="No preview">
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq2.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq3.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq4.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq5.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video style="background-color:#3c3c3c;" width="100%" poster="pubq6.png" controls>
+  <source src="PUBG_Movie_3D_Animation.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+</div>
+<br />
+<br />
+<div class="row">
+<div class="columnlast">
+<p>Subscribe to our newsletter to receive information on our training, special offer, tutorials and downloadsContent copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+</div>
+<div class="columnlast">
+<p>Subscribe to our newsletter to receive information on our training, special offer, tutorials and downloadsContent copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+</div>
+<div class="columnlast">
+<p>Subscribe to our newsletter to receive information on our training, special offer, tutorials and downloadsContent copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+</div>
+<div class="columnlast">
+<p>Subscribe to our newsletter to receive information on our training, special offer, tutorials and downloadsContent copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+</div>
+</div>
+<br />
+<div class="row">
+<div style="background:rgba(60, 60, 60, 0.4); color:white; padding:0px; border-radius: 10px 10px 0px 0px;" class="columnz">
+<p style="padding:0px">Subscribe to our newsletter to receive information on our training, special offer, tutorials and downloadsContent copy from Ai Multimedia Academy website http://www.aitrainings.com</p>
+</div>
+</div>
+
+<div class="sticky" style="background-color:#2a9ebb; border-top:double; border-top-color:white;">
+<p class="sticky" style="background-color:#2a9ebb; margin-top:20px; text-align:center;">kjhlohjlllllllllllllllllllllllllllllllllllllllllllllllllllllllllllmultimedise</p>
+</div>
+
+</body>
+</html>
